@@ -15,6 +15,9 @@ jobs:
         
           curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
           az --version
+      - name: login to Azure
+        run: |
+          az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }}  
           
         
           
