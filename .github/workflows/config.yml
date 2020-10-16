@@ -17,7 +17,8 @@ jobs:
           az --version
       - name: login to Azure
         run: |
-          #az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }}
+          az account clear
+          az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }}
             
                           
           
