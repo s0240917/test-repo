@@ -17,7 +17,9 @@ jobs:
           az --version
       - name: login to Azure
         run: |
-          az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }}  
-          
-        
+          #az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }}
+            
+          az account set --subscription ${{ secrets.ACCOUNT_SUBS }}
+          az aks get-credentials --resource-group ConOptium --name dev-conoptium-aks
+                
           
