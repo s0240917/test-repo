@@ -17,8 +17,8 @@ jobs:
           az --version
       - name: login to Azure
         run: |
-          az login
-          #az login --username=${{ secrets.AZURE_USERNAME }} --password=${{ secrets.AZURE_PASSWORD }}
+          #az login
+          az login --username=${{ secrets.AZURE_USERNAME }} --password=${{ secrets.AZURE_PASSWORD }}
             
                           
           
