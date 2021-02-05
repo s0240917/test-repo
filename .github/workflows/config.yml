@@ -16,7 +16,7 @@ jobs:
       - name: Checking Directory of Push
         run: |
         
-          cd $GITHUB_EVENT_PATH
+          vi $GITHUB_EVENT_PATH
           ls
       - name: login to Azure
         run: |
