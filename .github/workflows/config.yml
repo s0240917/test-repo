@@ -1,6 +1,9 @@
 on:
   push:
-    branches: [ master ]
+    paths:
+    - 'A/**'
+    - 'B/**'
+    - 'C/**'
 
 jobs:
   Build-Deploy:
@@ -10,15 +13,14 @@ jobs:
 
     steps:
       
-      - name: Installing Azure CLI
+      - name: Checking Directory of Push
         run: |
         
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-          az --version
+          cd $GITHUB_EVENT_PATH
+          ls
       - name: login to Azure
         run: |
-          #az login
-          az login --username=${{ secrets.AZURE_USERNAME }} --password=${{ secrets.AZURE_PASSWORD }}
+          cd $GITHUB_EVENT_PATH
             
                           
           
