@@ -17,6 +17,8 @@ jobs:
       
       # This step checks out a copy of your repository.
       - uses: actions/checkout@v2
+      - name: Check commit
+        uses: adityaa30/check-commit@master
       
       - name: Checking Directory of Push
         run: |
