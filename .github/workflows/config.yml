@@ -13,14 +13,17 @@ jobs:
 
     steps:
       
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v2
+      
       - name: Checking Directory of Push
         run: |
         
-          vi $GITHUB_EVENT_PATH
+          
           ls
       - name: login to Azure
         run: |
-          cd $GITHUB_EVENT_PATH
+          ls
             
                           
           
