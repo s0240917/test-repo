@@ -12,6 +12,7 @@ jobs:
 
 
     steps:
+      - run: env
       
       # This step checks out a copy of your repository.
       - uses: actions/checkout@v2
