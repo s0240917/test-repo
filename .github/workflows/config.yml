@@ -21,7 +21,7 @@ jobs:
       
       - name: Checking Directory of Push
         run: |
-        
+          echo $github.event
           COMMENT=$(echo "${{ github.event.comment.body }}")
           ls
       - name: login to Azure
